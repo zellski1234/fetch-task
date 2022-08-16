@@ -7,31 +7,17 @@ const Home = () => {
     const [errorMsg, setErrorMsg] = useState('')
 	const [anime, setAnime] = useState([])
 	const [modalOpen, setModalOpen] = useState(false);
-    const [show, setShow] = useState(false)
+    // const [show, setShow] = useState(false)
 
-    function showModal (){
-        setShow(true)
-        return;
-    }
+    // function showModal (){
+    //     setShow(true)
+    //     return;
+    // }
 
-    function hideModal (){
-        setShow(false)
-        return;
-    }
-    
-    showModal = (animeList) => {
-        this.setState({ show: true, current: animeList });
-    };
-    
-    hideModal = () => {
-        this.setState({ show: false });
-    };
-    
-
-
-
-
-
+    // function hideModal (){
+    //     setShow(false)
+    //     return;
+    // }
 
 	// useEffect only runs once when component is first rendered
 	useEffect(() => {
@@ -65,10 +51,10 @@ const Home = () => {
 		return <h1>{errorMsg}</h1>
 	}
 
-    const showHideClassName = show ? "modal display-block" : "modal display-none";
+    // const showHideClassName = show ? "modal display-block" : "modal display-none";
 
     return (
-        <div className={showHideClassName} id="mainDiv">
+        <div id="mainDiv">
 				{/* map through data from API that is stored in the state */}
 				{anime.map((anime, index) => {
 					return (
